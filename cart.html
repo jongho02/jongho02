@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>장바구니</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Myeongjo&display=swap" rel="stylesheet"/>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Nanum Gothic', sans-serif;
+      background: #fdfaf5;
+      color: #333;
+    }
+
+    header {
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: flex-end;
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+    }
+
+    .top-bar a {
+      margin-left: 1rem;
+      text-decoration: none;
+      color: #555;
+    }
+
+    .nav-bar {
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      padding: 1rem 0;
+    }
+
+    .nav-bar a {
+      text-decoration: none;
+      color: #222;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #f5f0e6;
+    }
+
+    .hero h1 {
+      font-family: 'Nanum Myeongjo', serif;
+      font-size: 2.3rem;
+      color: #4a2f2f;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    th, td {
+      padding: 1rem;
+      text-align: left;
+      border-bottom: 1px solid #eee;
+    }
+
+    th {
+      background-color: #f5e9e0;
+      font-family: 'Nanum Myeongjo', serif;
+      color: #4a2f2f;
+    }
+
+    td img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .quantity {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
+
+    .quantity input {
+      width: 40px;
+      text-align: center;
+      padding: 0.3rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .remove-btn {
+      background: none;
+      border: none;
+      color: #b00;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .total {
+      text-align: right;
+      margin-top: 1.5rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #4a2f2f;
+    }
+
+    .checkout-btn {
+      display: block;
+      margin: 2rem auto;
+      background: #4a2f2f;
+      color: white;
+      border: none;
+      padding: 0.8rem 2rem;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .checkout-btn:hover {
+      background: #6a4a4a;
+    }
+
+    footer {
+      background: #fff;
+      padding: 1.5rem;
+      border-top: 1px solid #ddd;
+      font-size: 0.9rem;
+      text-align: center;
+      color: #666;
+    }
+
+    footer a {
+      color: #666;
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+    <div class="top-bar">
+        <a href="login.html">로그인</a>
+        <a href="mypage.html">마이페이지</a>
+        <a href="cart.html"><strong>장바구니 (2)</strong></a>
+  </div>
+  <nav class="nav-bar">
+        <a href="main.html">HOME</a>
+        <a href="new.html">NEW</a>
+        <a href="community.html">COMMUNITY</a>
+        <a href="login.html">LOGIN</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>🛒 장바구니</h1>
+</section>
+
+<main>
+  <table>
+    <thead>
+      <tr>
+            <th>상품</th>
+            <th>상품명</th>
+            <th>수량</th>
+            <th>가격</th>
+            <th>삭제</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><img src="image/카메라 키링.png" alt="Memory Lens"></td>
+        <td>Memory Lens</td>
+        <td class="quantity">
+          <input type="number" value="1" min="1"/>
+        </td>
+        <td>₩49,000</td>
+        <td><button class="remove-btn">✕</button></td>
+      </tr>
+      <tr>
+        <td><img src="image/퍼즐키링.jpg" alt="Linked Pieces"></td>
+        <td>Linked Pieces</td>
+        <td class="quantity">
+          <input type="number" value="1" min="1"/>
+        </td>
+        <td>₩22,000</td>
+        <td><button class="remove-btn">✕</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="total">
+    총 합계: ₩71,000
+  </div>
+
+  <button class="checkout-btn">결제하기</button>
+</main>
+
+<footer>
+  <div><a href="#">ABOUT</a> | <a href="#">GUIDE</a> | <a href="#">CONTACT</a></div>
+  <div>yjho01935@maver.com 010-9560-0935 20211790 윤종호</div>
+</footer>
+
+</body>
+</html>

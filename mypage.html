@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>마이페이지</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Nanum+Gothic&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Nanum Gothic', sans-serif;
+      background: #fdfaf5;
+      color: #333;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1;
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+    }
+
+    header {
+      border-bottom: 1px solid #ddd;
+      background: #fff;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: flex-end;
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+    }
+
+    .top-bar a {
+      margin-left: 1rem;
+      text-decoration: none;
+      color: #555;
+    }
+
+    .nav-bar {
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      padding: 1rem 0;
+    }
+
+    .nav-bar a {
+      text-decoration: none;
+      color: #222;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+    }
+
+    .section-title {
+      font-size: 1.6rem;
+      font-family: 'Nanum Myeongjo', serif;
+      margin-bottom: 1.5rem;
+      color: #4a2f2f;
+    }
+
+    .user-info {
+      background-color: #eef0f4;
+      border-radius: 10px;
+      padding: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .user-box {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .user-field {
+      display: flex;
+      margin-bottom: 1rem;
+      align-items: center;
+    }
+
+    .user-field label {
+      width: 100px;
+      font-weight: bold;
+      color: #3a3a3a;
+    }
+
+    .user-field .value {
+      flex: 1;
+      padding: 0.5rem 0.75rem;
+      background: #fff;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      color: #444;
+    }
+
+    .edit-btn {
+      margin-top: 1.5rem;
+      background: #4a2f2f;
+      color: #fff;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .edit-btn:hover {
+      background: #6a4a4a;
+    }
+
+    .order-history .card {
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      padding: 1rem 1.5rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    footer {
+      background: #fff;
+      padding: 1.5rem;
+      border-top: 1px solid #ddd;
+      font-size: 0.9rem;
+      text-align: center;
+      color: #666;
+    }
+
+    footer a {
+      color: #666;
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="top-bar">
+      <a href="login.html">로그아웃</a>
+    </div>
+    <nav class="nav-bar">
+      <a href="main.html">HOOM</a>
+      <a href="new.html">NEW</a>
+      <a href="community.html">COMMUNITY</a>
+      <a href="login.html">LOGIN</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="user-info">
+      <h2 class="section-title">👤 회원 정보</h2>
+      <div class="user-box">
+        <div class="user-field">
+          <label>이름</label>
+          <div class="value">윤종호</div>
+        </div>
+        <div class="user-field">
+          <label>이메일</label>
+          <div class="value">yjho01935@maver.com</div>
+        </div>
+        <div class="user-field">
+          <label>전화번호</label>
+          <div class="value">010-9560-0935</div>
+        </div>
+        <a href="#" class="edit-btn">정보 수정</a>
+      </div>
+    </section>
+
+    <section class="order-history">
+      <h2 class="section-title">🧾 주문 내역</h2>
+      <div class="card">
+        <p><strong>상품명:</strong> Memory Lens 키링</p>
+        <p><strong>주문일:</strong> 2025-06-15</p>
+        <p><strong>배송상태:</strong> 배송중</p>
+      </div>
+      <div class="card">
+        <p><strong>상품명:</strong> Capsule Moments 키링</p>
+        <p><strong>주문일:</strong> 2025-06-10</p>
+        <p><strong>배송상태:</strong> 배송 완료</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div><a href="#">ABOUT</a> | <a href="#">GUIDE</a> | <a href="#">CONTACT</a></div>
+    <div>yjho01935@maver.com 010-9560-0935 20211790 윤종호</div>
+  </footer>
+
+</body>
+</html>

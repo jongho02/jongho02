@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>COMMUNITY</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Myeongjo&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Nanum Gothic', sans-serif;
+      background: #fdfaf5;
+      color: #333;
+    }
+
+    header {
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: flex-end;
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+    }
+
+    .top-bar a {
+      margin-left: 1rem;
+      text-decoration: none;
+      color: #555;
+    }
+
+    .nav-bar {
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      padding: 1rem 0;
+    }
+
+    .nav-bar a {
+      text-decoration: none;
+      color: #222;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #f5f0e6;
+    }
+
+    .hero h1 {
+      font-family: 'Nanum Myeongjo', serif;
+      font-size: 2.3rem;
+      margin-bottom: 0.5rem;
+      color: #4a2f2f;
+    }
+
+    .hero p {
+      font-size: 1rem;
+      color: #6a4a4a;
+    }
+
+    .review-section {
+      max-width: 1200px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+
+    .review-card {
+      background: #fff;
+      border: 1px solid #e5d6ce;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 6px rgba(74,47,47,0.05);
+    }
+
+    .review-card img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .review-content {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      margin-bottom: 0.8rem;
+      color: #444;
+    }
+
+    .review-author {
+      text-align: right;
+      font-weight: bold;
+      color: #6a4a4a;
+    }
+
+    .write-box {
+      background: #fff9f5;
+      border: 1px solid #e5d6ce;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .write-box h3 {
+      font-family: 'Nanum Myeongjo', serif;
+      color: #4a2f2f;
+      margin-bottom: 1rem;
+    }
+
+    textarea {
+      width: 97%;
+      height: 100px;
+      padding: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      resize: vertical;
+    }
+
+    .submit-btn {
+      margin-top: 1rem;
+      background: #4a2f2f;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .submit-btn:hover {
+      background: #6a4a4a;
+    }
+
+    footer {
+      background: #fff;
+      padding: 1.5rem;
+      border-top: 1px solid #ddd;
+      font-size: 0.9rem;
+      text-align: center;
+      color: #666;
+    }
+
+    footer a {
+      color: #666;
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="top-bar">
+    <a href="login.html">로그인</a>
+    <a href="mypage.html">마이페이지</a>
+    <a href="cart.html">장바구니 (0)</a>
+  </div>
+  <nav class="nav-bar">
+    <a href="main.html">HOME</a>
+    <a href="new.html">NEW</a>
+    <a href="community.html"><strong>COMMUNITY</strong></a>
+    <a href="login.html">LOGIN</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>COMMUNITY</h1>
+  <p>여러분의 기억을 공유하고 서로 소통해보세요</p>
+</section>
+
+<main class="review-section">
+  <div class="review-card">
+    <img src="image/리뷰1.jpg" alt="review1" />
+    <div class="review-content">"평소에 사진찍는걸 좋아하는데 키링이 생겨서 좋네요"</div>
+    <div class="review-author">– goodday2123</div>
+  </div>
+
+  <div class="review-card">
+    <img src="image/리뷰2.jpg" alt="review2" />
+    <div class="review-content">"남자친구랑 커플로 했는데 주변에서 어디서 구매했는지 물어보네요 ㅎㅎ"</div>
+    <div class="review-author">– aaaa1234</div>
+  </div>
+
+  <div class="review-card">
+    <img src="image/리뷰3.jpg" alt="review3" />
+    <div class="review-content">"큐알로 내가 좋아하는 음악을 공유하는 것이 신기하네요!"</div>
+    <div class="review-author">– zl존3333</div>
+  </div>
+
+  <div class="review-card">
+    <img src="image/리뷰4.jpg" alt="review4" />
+    <div class="review-content">"good"</div>
+    <div class="review-author">– 햄북</div>
+  </div>
+
+  <div class="write-box">
+    <h3>✍ 나의 기억 공유하기</h3>
+    <form action="#" method="POST">
+      <textarea name="review" placeholder="당신의 이야기를 적어주세요..."></textarea>
+      <button type="submit" class="submit-btn">등록하기</button>
+    </form>
+  </div>
+</main>
+
+<footer>
+  <div><a href="#">ABOUT</a> | <a href="#">GUIDE</a> | <a href="#">CONTACT</a></div>
+  <div>yjho01935@maver.com 010-9560-0935 20211790 윤종호</div>
+</footer>
+
+</body>
+</html>
