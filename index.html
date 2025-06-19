@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>기억의 조각</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Nanum+Gothic&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      margin:0; padding:0;
+      font-family: 'Nanum Gothic', sans-serif;
+      background: #fdfaf5;
+      color: #333;
+    }
+
+    header {
+      border-bottom: 1px solid #ddd;
+      background: #fff;
+    }
+    .top-bar {
+      display:flex; justify-content:flex-end;
+      padding:0.5rem 1rem;
+      font-size:0.9rem;
+    }
+    .top-bar a {
+      margin-left:1rem;
+      text-decoration:none;
+      color:#555;
+    }
+    .nav-bar {
+      display:flex; justify-content:center;
+      gap:2.5rem;
+      padding:1rem 0;
+    }
+    .nav-bar a {
+      text-decoration:none;
+      color:#222;
+      font-weight:500;
+      letter-spacing: 0.05em;
+    }
+
+    .hero {
+      text-align:center;
+      padding:2rem 1rem;
+      background:#f5f0e6;
+    }
+    .hero h1 {
+      font-family:"Nanum Myeongjo", serif;
+      font-size:2.5rem;
+      margin-bottom:0.5rem;
+      color:#4a2f2f;
+    }
+    .hero p {
+      font-size:1.1rem;
+      color:#6a4a4a;
+    }
+
+    .grid {
+      display:grid;
+      grid-template-columns:1fr;
+      gap:1.5rem;
+      max-width:960px;
+      margin:2rem auto;
+      padding:0 1rem;
+    }
+    @media(min-width:768px){
+      .grid{grid-template-columns:repeat(2,1fr);}
+    }
+    
+    .card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      background:#fff;
+      border:1px solid #eee;
+      border-radius:8px;
+      overflow:hidden;
+      box-shadow:0 2px 6px rgba(0,0,0,0.05);
+      transition:transform .2s;
+      cursor: pointer;
+    }
+    .card:hover { transform:translateY(-4px); }
+    .card img {
+      display:block;
+      width:100%; height:300px;
+      object-fit:cover;
+    }
+    .card-content {
+      padding:1rem;
+    }
+    .card-title {
+      font-weight:600;
+      color:#4a2f2f;
+      margin:0 0 .5rem;
+      font-size:1.25rem;
+    }
+    .card-desc {
+      font-size:0.95rem;
+      color:#555;
+      line-height:1.4;
+    }
+
+    .review-wrapper {
+      max-width: 1200px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+
+    .review-title {
+      text-align: center;
+      font-family: 'Nanum Myeongjo', serif;
+      font-size: 1.75rem;
+      margin-bottom: 1.5rem;
+      color: #4a2f2f;
+    }
+
+    .reviews {
+      display: flex;
+      gap: 2rem;
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      padding-bottom: 1rem;
+    }
+
+    .review-card {
+      background: #fff9f5;
+      border: 1px solid #e5d6ce;
+      border-radius: 10px;
+      padding: 1rem 1.5rem 2rem;
+      box-shadow: 0 2px 6px rgba(74,47,47,0.1);
+      transition: box-shadow 0.3s ease;
+
+      flex: 0 0 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .review-card:hover {
+      box-shadow: 0 6px 15px rgba(74,47,47,0.2);
+    }
+
+    .review-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .review-text {
+      font-size: 1.1rem;
+      line-height: 1.5;
+      margin-bottom: 1rem;
+      font-style: italic;
+    }
+
+    .review-author {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: #6a4a4a;
+    }
+
+    footer {
+      background:#fff;
+      padding:1.5rem;
+      border-top:1px solid #ddd;
+      font-size:0.9rem;
+      text-align:center;
+      color:#666;
+    }
+    footer a {
+      color:#666;
+      text-decoration:none;
+      margin:0 .5rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="top-bar">
+    <a href="login.html">로그인</a>
+    <a href="mypage.html">마이페이지</a>
+    <a href="cart.html">장바구니 (0)</a>
+  </div>
+  <nav class="nav-bar">
+    <a href="index.html"><strong>HOME</strong></a>
+    <a href="new.html">NEW</a>
+    <a href="community.html">COMMUNITY</a>
+    <a href="login.html">LOGIN</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>' 기억의 조각 '</h1>
+  <p>소중한 기억을 간직할 수 있는 키링</p>
+</section>
+
+<main>
+  <div class="grid">
+    <a href="memorylens.html" class="card">
+      <img src="image/카메라 키링.png" alt="Memory Lens" />
+      <div class="card-content">
+        <div class="card-title">Memory Lens</div>
+        <div class="card-desc">당신의 기억을 조심스럽게 담아둘 작은 카메라입니다.</div>
+      </div>
+    </a>
+    <a href="soundbox.html" class="card">
+      <img src="image/lp키링.jpg" alt="Sound Box" />
+      <div class="card-content">
+        <div class="card-title">Sound Box</div>
+        <div class="card-desc">한 곡의 노래로, 하나의 순간을 담았습니다.</div>
+      </div>
+    </a>
+    <a href="capsulemoments.html" class="card">
+      <img src="image/캡슐 키링.jpg" alt="Capsule Moments" />
+      <div class="card-content">
+        <div class="card-title">Capsule Moments</div>
+        <div class="card-desc">소중한 순간들을 작은 캡슐에 담아, 언제나 간직할 수 있는 특별한 기억입니다.</div>
+      </div>
+    </a>
+    <a href="linkedpieces.html" class="card">
+      <img src="image/퍼즐키링.jpg" alt="Linked Pieces" />
+      <div class="card-content">
+        <div class="card-title">Linked Pieces</div>
+        <div class="card-desc">서로 다른 조각이 만나 하나가 되는, 소중한 인연의 연결고리입니다.</div>
+      </div>
+    </a>
+  </div>
+</main>
+
+<section class="review-wrapper">
+  <h2 class="review-title">구매자 리뷰</h2>
+  <div class="reviews">
+    <div class="review-card">
+      <img src="image/리뷰1.jpg" alt="review1" />
+      <p class="review-text">"평소에 사진찍는걸 좋아하는데 키링이 생겨서 좋네요"</p>
+      <p class="review-author">– goodday2123</p>
+    </div>
+    <div class="review-card">
+      <img src="image/리뷰2.jpg" alt="review2" />
+      <p class="review-text">"남자친구랑 커플로 했는데 주변에서 어디서 구매했는지 물어보네요 ㅎㅎ"</p>
+      <p class="review-author">– aaaa1234</p>
+    </div>
+    <div class="review-card">
+      <img src="image/리뷰3.jpg" alt="review3" />
+      <p class="review-text">"큐알로 내가 좋아하는 음악을 공유하는 것이 신기하네요!"</p>
+      <p class="review-author">– zl존3333</p>
+    </div>
+    <div class="review-card">
+      <img src="image/리뷰4.jpg" alt="review4" />
+      <p class="review-text">"good"</p>
+      <p class="review-author">– 햄북</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div><a href="#">ABOUT</a> | <a href="#">GUIDE</a> | <a href="#">CONTACT</a></div>
+  <div>yjho01935@maver.com 010-9560-0935 20211790 윤종호</div>
+</footer>
+
+</body>
+</html>
